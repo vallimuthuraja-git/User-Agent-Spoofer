@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyBtn = document.getElementById('copyBtn');
     const messageDiv = document.getElementById('message');
     const popularUAsDiv = document.getElementById('popularUAs');
+    const popularUAsToggle = document.getElementById('popularUAsToggle');
     const infoBtn = document.getElementById('infoBtn');
 
     // Display the user-agent
@@ -55,6 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Info button event listener
     infoBtn.addEventListener('click', () => {
         alert('User-Agents are text strings browsers send to websites to identify browser type, version, and OS.\n\nThis extension shows your current UA and popular ones from major browsers (stable and latest versions).\n\nUse copy buttons for testing web compatibility and debugging.');
+    });
+
+    // Toggle popular UAs visibility
+    popularUAsToggle.addEventListener('click', () => {
+        if (popularUAsDiv.style.display === 'none') {
+            popularUAsDiv.style.display = 'block';
+            popularUAsToggle.textContent = '▼ Popular User-Agents';
+        } else {
+            popularUAsDiv.style.display = 'none';
+            popularUAsToggle.textContent = '▶ Popular User-Agents';
+        }
     });
 
     // Event delegation for popular UA copy buttons
