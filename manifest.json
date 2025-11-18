@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Spoof Chrome Latest",
+  "version": "1.0",
+  "description": "Displays the latest Chrome user-agent with copy functionality",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "User-Agent Spoofer"
+  }
+}
